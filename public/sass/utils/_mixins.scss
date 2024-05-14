@@ -1,0 +1,35 @@
+@mixin setWidthFull {
+  display: flex;
+  flex: {
+    grow: 1;
+    shrink: 1;
+    basis: 0;
+  }
+}
+@mixin centeredUseFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin setHeightWidth ($height, $width) {
+  height: $height;
+  width: $width;
+}
+@mixin setPositon ($position, $top: 0, $bottom: 0, $left: 0, $right: 0) {
+  position: $position;
+  top: $top;
+  bottom: $bottom;
+  left: $left;
+  right: $right;
+}
+@mixin setFlex ($flex, $alignItems: 'center', $justifyContent: 'center') {
+  display: $flex;
+  align-items: $alignItems;
+  justify-content: $justifyContent;
+}
+@mixin setStyleFont ($size, $weight, $lineHeight: normal) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lineHeight;
+  font-style: normal;
+}

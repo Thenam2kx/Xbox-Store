@@ -1,10 +1,10 @@
 <?php
   class Home extends Controller {
-    function Sayhi() {
+    function GetModels() {
       echo $this->model('ProductModel');
     }
 
-    function Show() {
+    function GetViews() {
       echo $this->view('ProductView', []);
     }
   }
