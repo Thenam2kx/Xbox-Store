@@ -1,20 +1,40 @@
-@mixin setWidthFull {
-  display: flex;
-  flex: {
-    grow: 1;
-    shrink: 1;
-    basis: 0;
+@mixin boxModel($width, $height, $margin: 0, $padding: 0, $border: none, $borderRadius: 0) {
+  width: $width;
+  height: $height;
+  margin: $margin;
+  padding: $padding;
+  border: $border;
+  border-radius: $borderRadius;
+}
+
+@mixin button($color: #333, $background: #ddd, $padding: 10px 20px, $border: 1px solid #ccc, $border-radius: 4px) {
+  color: $color;
+  background-color: $background;
+  padding: $padding;
+  border: $border;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: lighten($background, 10%);
   }
 }
-@mixin centeredUseFlex {
+
+@mixin gridLayout($columns: 4, $gap: 16px) {
+  display: grid;
+  grid-template-columns: repeat($columns, minmax(0, 1fr));
+  gap: $gap;
+}
+
+@mixin flexboxLayout($direction: row, $align: center, $justify: center) {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
 }
-@mixin setHeightWidth ($height, $width) {
-  height: $height;
-  width: $width;
-}
+
 @mixin setPositon ($position, $top: 0, $bottom: 0, $left: 0, $right: 0) {
   position: $position;
   top: $top;
@@ -22,14 +42,25 @@
   left: $left;
   right: $right;
 }
-@mixin setFlex ($flex, $alignItems: 'center', $justifyContent: 'center') {
-  display: $flex;
-  align-items: $alignItems;
-  justify-content: $justifyContent;
-}
+
 @mixin setStyleFont ($size, $weight, $lineHeight: normal) {
   font-size: $size;
   font-weight: $weight;
   line-height: $lineHeight;
   font-style: normal;
 }
+
+@mixin setFullWidthUseFlexbox {
+  display: flex;
+  flex: {
+    shrink: 1;
+    grow: 1;
+    basis: 0;
+  }
+}
+
+@mixin setHeightWidth ($height, $width) {
+  height: $height;
+  width: $width;
+}
+

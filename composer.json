@@ -1,0 +1,18 @@
+{
+    "name": "lenovo/xbox-store",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Lenovo\\XboxStore\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Thenam2kx",
+            "email": "thenam2kx@gmail.com"
+        }
+    ],
+    "require": {
+        "twbs/bootstrap": "^5.3"
+    }
+}

@@ -2,21 +2,25 @@
 @import 'utils/functions';
 @import 'utils/mixins';
 
+@import 'vendors/bootstrap';
+@import 'vendors/jquery-ui';
+
 @import 'base/reset';
 @import 'base/typography';
 
-@import 'layout/navigation';
-@import 'layout/grid';
-@import 'layout/header';
-@import 'layout/footer';
-@import 'layout/sidebar';
-@import 'layout/forms';
+@import 'layouts/navigation';
+@import 'layouts/header';
+@import 'layouts/footer';
+@import 'layouts/sidebar';
+@import 'layouts/forms';
 
 @import 'components/buttons';
-
+@import 'components/carousel';
+@import 'components/slider';
 
 @import 'pages/home';
 @import 'pages/about';
 @import 'pages/contact';
-@import 'pages/login';
 
+@import 'themes/theme';
+@import 'themes/admin';
