@@ -5,8 +5,8 @@
     public $Phone;
     public $Password;
 
-    public function __construct() {
-      echo 'User';
+    public function __construct($email, $Password) {
+      $this->Email = $email;
     }
 
     function register($email, $Password) {
@@ -22,6 +22,6 @@
     }
   }
 
-  $nam = new User();
-
+  $nam = new User('thenam2kx@gmail.com', '12345');
+  var_dump($nam);
 ?>
