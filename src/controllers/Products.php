@@ -1,3 +1,7 @@
 <?php
-  echo 'Product Controller';
+  class Products {
+    function SayHi () {
+      echo 'Products - SayHi';
+    }
+  }
 ?>
