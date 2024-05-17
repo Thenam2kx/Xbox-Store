@@ -1,1 +1,11 @@
-// _home.scss
+.main {
+  padding: 20px 0;
+
+  &--wrapper {
+    @include setFlex(flex, '', '');
+    height: 100%;
+    width: 1280px;
+    margin: 0 auto;
+    gap: 16px;
+  }
+}

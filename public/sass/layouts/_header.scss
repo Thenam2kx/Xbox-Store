@@ -1,1 +1,74 @@
-// _header.scss
+.header--wrapper {
+  background-color: #ecf0f1;
+  @include setHeightWidth(80px, 100%);
+}
+.header {
+  width: 1280px;
+  height: 100%;
+  margin: 0 auto;
+  @include setFlex(flex, center, '');
+
+  &--logo {
+    font-size: 20px;
+    color: white;
+    & > a {
+      color: #2c3e50;
+    }
+  }
+
+  &--searchBox {
+    @include setWidthFull;
+
+    & > form {
+      @include setHeightWidth(auto, 80%);
+      @include setFlex(flex, center, '');
+      margin: 0 auto;
+      padding: 3px 4px;
+      border: 1px solid #bdc3c7;
+      border-radius: 6px;
+
+      & > input {
+        @include setWidthFull;
+        padding: 0 5px 0 5px;
+        outline: none;
+        border: none;
+        background-color: transparent;
+      }
+
+      & > button {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        margin-top: 1px;
+      }
+    }
+  }
+
+  &--cart {
+    position: relative;
+
+    &--wrapper > img {
+      margin: 0 10px;
+      cursor: pointer;
+    }
+    
+    &--wrapper > span {
+      @include centeredUseFlex;
+      @include setHeightWidth(16px, 16px);
+      @include setPositon(absolute, -50%, '', '', 0);
+      border-radius: 50%;
+      color: #ecf0f1;
+      font-size: 14px;
+      background-color: #e67e22;
+    }
+
+  }
+  
+  &--profiles {
+    &--wrapper > img {
+      margin: 0 10px;
+      cursor: pointer;
+    }
+  }
+}

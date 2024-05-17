@@ -11,7 +11,8 @@
     }
 
     function Account () {
-      echo 'Home > Account';
+      $tong = $this->view('master/master');
+      echo $tong;
     }
 
   }
