@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+
+
+<?php
+  echo 'vvdd';
+?>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -9,14 +14,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./public/css/style.css">
 </head>
-<body>
-  <header class="header--wrapper">
+<body> -->
+  <!-- <header class="header--wrapper">
     <section class="header">
-      <!-- ===== Logo ===== -->
+
       <div class="header--logo">
         <a href="#">Xbox Store</a>
       </div>
-      <!-- ===== Search Box ===== -->
+
       <div class="header--searchBox">
         <form action="" method="get">
           <input type="text" name="" id="" placeholder="Search">
@@ -25,23 +30,23 @@
           </button>
         </form>
       </div>
-      <!-- ===== Cart ===== -->
+
       <div class="header--cart">
         <div class="header--cart--wrapper">
           <img width="24" height="24" src="https://img.icons8.com/material-outlined/24/shopping-cart--v1.png" alt="shopping-cart--v1"/>
           <span>2</span>
         </div>
       </div>
-      <!-- ===== Profiles ===== -->
+
       <div class="header--profiles">
         <div class="header--profiles--wrapper">
           <img width="28" height="28" src="https://img.icons8.com/windows/32/user-male-circle.png" alt="user-male-circle"/>
         </div>
       </div>
     </section>
-  </header>
+  </header> -->
 
-  <main class="main">
+  <!-- <main class="main">
     <section class="main--wrapper">
       <section class="sidebar">
         <div class="sidebar--title">Danh muc</div>
@@ -307,8 +312,8 @@
         </div>
       </section>
     </section>
-  </main>
+  </main> -->
 
-  <footer></footer>
+  <!-- <footer></footer>
 </body>
-</html>
+</html> -->

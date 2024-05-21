@@ -1,8 +1,8 @@
 <?php
   class Home extends Controller {
     function SayHi () {
-      $nam = $this->model('Product_Mdl');
-      echo $nam->GetProducts();
+      $viewHome = $this->view('master.php');
+      echo $viewHome;
     }
 
     function Cate ($m, $n) {
@@ -10,10 +10,6 @@
       echo $tong->Tong($m, $n);
     }
 
-    function Account () {
-      $tong = $this->view('master/master');
-      echo $tong;
-    }
 
   }
 ?>

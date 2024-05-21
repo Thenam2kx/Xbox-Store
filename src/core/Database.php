@@ -16,6 +16,24 @@
       }
     }
   }
+
+  function connect() {
+    $host = 'localhost';
+    $dbname = 'Xbox-Store';
+    $username = 'root';
+    $password = '';
+
+    try {
+      $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    } catch (PDOException $err) {
+      echo 'Connection fail'.$err->getMessage();
+    }
+
+    return $conn;
+
+  }
 ?>
 
 
