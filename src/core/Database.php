@@ -1,7 +1,7 @@
 <?php
   class Database {
     protected $host = 'localhost';
-    protected $dbname = 'Xbox-Store';
+    protected $dbname = 'xbox-store';
     protected $username = 'root';
     protected $password = '';
     public $conn;
@@ -15,6 +15,24 @@
         echo "Connection failed: " . $err->getMessage();
       }
     }
+  }
+
+  function connect() {
+    $host = 'localhost';
+    $dbname = 'xbox-store';
+    $username = 'root';
+    $password = '';
+
+    try {
+      $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    } catch (PDOException $err) {
+      echo 'Connection fail'.$err->getMessage();
+    }
+
+    return $conn;
+
   }
 ?>
 

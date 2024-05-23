@@ -1,15 +1,14 @@
 CREATE TABLE `Role` (
-  `RoleID` int PRIMARY KEY AUTO_INCREMENT,
-  `role` bit,
+  `RoleID` varchar(10) PRIMARY KEY,
   `RoleName` varchar(20)
 );
 
 CREATE TABLE `User` (
-  `UserID` int PRIMARY KEY AUTO_INCREMENT,
-  `RoleID` int,
+  `UserID` varchar(10) PRIMARY KEY,
+  `RoleID` varchar(10),
   `FullName` varchar(50),
   `Email` varchar(50),
-  `Phone` varchar(10),
+  `Phone` varchar(15),
   `Gender` bit,
   `Password` varchar(50),
   `Status` bit,
@@ -18,10 +17,10 @@ CREATE TABLE `User` (
 );
 
 CREATE TABLE `Products` (
-  `ProductID` int PRIMARY KEY AUTO_INCREMENT,
-  `CategoryID` int,
-  `SupplierID` int,
-  `ProductName` varchar(255),
+  `ProductID` varchar(10) PRIMARY KEY,
+  `CategoryID` varchar(10),
+  `SupplierID` varchar(10),
+  `ProductName` varchar(150),
   `UnitPrice` int,
   `UnitInStock` int,
   `UnitInOrder` int,
@@ -33,55 +32,55 @@ CREATE TABLE `Products` (
 );
 
 CREATE TABLE `Discount` (
-  `DiscountID` int PRIMARY KEY AUTO_INCREMENT,
-  `ProductID` int,
+  `DiscountID` PRIMARY KEY AUTO_INCREMENT,
+  `ProductID` varchar(10),
   `DisPrice` int
 );
 
 CREATE TABLE `Category` (
-  `CategoryID` int PRIMARY KEY AUTO_INCREMENT,
-  `CategoryName` varchar(50),
+  `CategoryID` varchar(10) PRIMARY KEY,
+  `CategoryName` varchar(10),
   `Thumbnail` varchar(500),
   `Description` varchar(255)
 );
 
 CREATE TABLE `Reviews` (
   `ReviewsID` int PRIMARY KEY AUTO_INCREMENT,
-  `ProductID` int,
+  `ProductID` varchar(10),
   `Riviews` longtext
 );
 
 CREATE TABLE `Gallery` (
   `GalleryID` int PRIMARY KEY AUTO_INCREMENT,
-  `ProductID` int,
-  `Gallery` varchar(500)
+  `ProductID` varchar(10),
+  `Gallery` varchar(255)
 );
 
 CREATE TABLE `Supplier` (
-  `SupplierID` int PRIMARY KEY AUTO_INCREMENT,
+  `SupplierID` varchar(10) PRIMARY KEY,
   `SupplierName` varchar(150),
-  `phone` varchar(10),
+  `phone` varchar(15),
   `Email` varchar(50),
-  `Country` varchar(20),
-  `City` varchar(20)
+  `Country` varchar(30),
+  `City` varchar(30)
 );
 
 CREATE TABLE `Order` (
-  `OrderID` int PRIMARY KEY AUTO_INCREMENT,
-  `UserID` int,
+  `OrderID` varchar(10) PRIMARY KEY,
+  `UserID` varchar(10),
   `Address` varchar(255),
   `ShippingFee` int,
   `OrderDate` datetime,
   `ShippedDate` datetime,
   `RequiredDate` datetime,
   `Status` bit,
-  `Message` varchar(500)
+  `Message` varchar(255)
 );
 
 CREATE TABLE `OrderDetail` (
   `OrderDetailID` int PRIMARY KEY AUTO_INCREMENT,
-  `OrderID` int,
-  `ProductID` int,
+  `OrderID` varchar(10),
+  `ProductID` varchar(10),
   `Quantity` int,
   `UnitPrice` int,
   `Discount` int
